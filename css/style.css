@@ -1,0 +1,238 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+  background-color: #f4f4f4;
+}
+
+/* Global */
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  margin: 10px 50px;
+}
+
+div#burger {
+  display: none;
+}
+
+/* ========================== */
+
+/* Header*/
+
+.sticky {
+    background-color: #a1a1dd;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+header .container a img {
+  border-radius: 70px;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+
+ul li a {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+/* ======================= */
+
+/* main */
+
+main {
+  width: 100%;
+}
+div#jumbotron {
+  background-image:  url(../images/jumbo.jpg);
+  filter: brightness(80%);
+  background-repeat: no-repeat;
+  min-height: 700px;
+  background-position: center center;
+  margin-bottom: 80px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div#jumbotron h1 {
+  color: #fff;
+  font-size: 30px;
+  line-height: 1.5;
+  z-index: 1;
+}
+
+#gallery {
+  margin-bottom: 80px;
+}
+
+#gallery h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #000;
+}
+
+div#galImg {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  justify-items: center;
+  align-content: center;
+}
+
+div#about {
+  margin-bottom: 80px;
+  background-color: #a1a1dd;
+  color: #fff;
+}
+
+div#about h2 {
+  border-bottom: 2px solid #fff;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+div#about p {
+    padding: 10px;
+    letter-spacing: 1px;
+    font-size: 15px;
+
+}
+
+div#contact h2 {
+  text-align: center;
+  border-bottom: 2px solid #000;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+div#contact {
+  text-align: center;
+}
+
+div#contact > img {
+  border-radius: 80px;
+  margin-bottom: 20px;
+}
+
+div#content p {
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+div#content a img {
+  margin: 5px;
+}
+
+/* ============================ */
+
+/* Footer */
+footer {
+  background-color: #a1a1dd;
+  color: #fff;
+  height: 100px;
+  padding-top: 10px;
+}
+
+footer div p {
+  font-size: 13px;
+  font-weight: 500;
+}
+/* ============================= */
+
+@media (max-width: 767px) {
+  ul {
+    display: none;
+    text-align: center;
+  }
+
+  .toggle {
+    display: block;
+    background-color: #a1a1dd;
+    height: 100%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 50%;
+    position: absolute;
+    animation: animate 1s forwards;
+    box-shadow: rgba(163, 163, 163, 0.54) 0px 10px 10px 400px;;
+  }
+
+
+  @keyframes animate {
+    0% {
+      transform: translateX(-74%);
+  }
+  100% {
+      transform: translateX(0%);
+  }
+    
+  }
+
+  ul li {
+    margin: 40px 0;
+  }
+
+  ul li a {
+    color: #fff;
+  }
+  
+  div#burger {
+    display: block;
+  }
+
+  div#burger div {
+    height: 2px;
+    border: 1px solid #000;
+    margin: 6px;
+    width: 30px;
+  }
+
+  div#jumbotron {
+    background: url(../images/jumboMob.jpg);
+    background-repeat: no-repeat;
+    min-height: 300px;
+    background-position: center center;
+  }
+
+  div#gallery #galImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+  }
+}
